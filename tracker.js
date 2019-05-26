@@ -13,11 +13,7 @@ const webSocketUrl = 'wss://push.planetside2.com/streaming?environment=ps2&servi
 
 const experienceLookupURL = 'https://census.daybreakgames.com/s:rmankaryousID/get/ps2/experience?c:limit=1430';
 
-var soundJson;
-
-fetch("soundbank.json")
-  .then(function(data) { return data.json() })
-  .then(function(response) { soundJson = response });
+const soundJson = require('./soundbank.json');
 
 function submitName(characterName) {
   fetch(nameLookupURL + characterName)
@@ -89,12 +85,3 @@ function playSound(type) {
   const sound = new Audio(randomSound);
   const play = sound.play();
 }
-
-let win = require('electron').remote.getCurrentWindow()
-let bar = getElementById('dragBar');
-bar.addEventListener('mouseenter', () => {
-  win.setIgnoreMouseEvents(false);
-})
-bar.addEventListener('mouseleave', () => {
-  win.setIgnoreMouseEvents(true)
-})

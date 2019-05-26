@@ -17,9 +17,6 @@ function createWindow() {
   win = new BrowserWindow({
     width: 800,
     height: 600,
-    transparent: true,
-    alwaysOnTop: true,
-    frame: false,
     webPreferences: {
       nodeIntegration: true
     }
@@ -27,6 +24,8 @@ function createWindow() {
 
   // and load the index.html of the app.
   win.loadFile('index.html');
+
+  win.setMenuBarVisibility(false)
 
   // Emitted when the window is closed.
   win.on('closed', () => {
