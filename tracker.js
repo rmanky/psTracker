@@ -25,7 +25,7 @@ function openWebSocket(character) {
         "service": "event",
         "action": "subscribe",
         "characters": [characterID],
-        "eventNames": ["GainExperience"]
+        "eventNames": ["Death"]
     };
 
     console.log(characterID)
@@ -43,19 +43,19 @@ function openWebSocket(character) {
 
 function eventHandler(event) {
     const parsedData = JSON.parse(event.data);
+    console.log(parsedData);
     try {
         const experienceID = parsedData.payload.experience_id;
 
         fetch(experienceLookupURL)
             .then(data => { return data.json() })
-            .then(res => { textToSpeach(res, experienceID)})
+            .then(res => { voiceLine(res, experienceID)})
 
     } catch (error) {
         // Error handling lol
-        console.log(parsedData);
     }
 }
 
-function textToSpeach(list, experienceID) {
+function voiceLine(list, experienceID) {
     console.log(list.experience_list[experienceID - 1]);
 }
