@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> PS Tracker </title>
-    </head>
-    <body>
-        <h1> Planetside 2 Tracker </h1>
-    </body>
+
+<head>
+  <script src="tracker.js"></script>
+  <title> PS Tracker </title>
+</head>
+
+<body style="background-color:rgba(0,0,0,0.5);">
+  <div id="drageBar" style="background-color: red; -webkit-app-region: drag">
+    <p> Drag me! </p>
+  </div>
+  <h1> Planetside 2 Tracker </h1>
+  <p> Player Name: </p>
+  <input id="inputName" type="text" name="playername"></input>
+  <br><br>
+  <button type="button" onclick="submitName(getElementById('inputName').value)"> Submit </button>
+  <button type="button" onclick="playSound('singlekill')"> Simulate Kill </button>
+</body>
+
 </html>

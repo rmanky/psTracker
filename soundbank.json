@@ -1,0 +1,43 @@
+{
+  "singlekill": [{
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/1/13/Dlc_glados_killing_spree_ann_glados_kill_mega_02.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/e/e2/Dlc_glados_killing_spree_ann_glados_kill_dominate_01.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/e/e7/Dlc_glados_killing_spree_ann_glados_kill_unstop_01.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/a/ac/Dlc_glados_killing_spree_ann_glados_kill_godlike_02.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/6/62/Dlc_glados_killing_spree_ann_glados_kill_holy_03.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/b/b7/Dlc_glados_killing_spree_ann_glados_kill_holy_04.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/8/8f/Dlc_glados_killing_spree_ann_glados_kill_wicked_01.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/9/96/Dlc_glados_killing_spree_ann_glados_kill_wicked_02.mp3"
+    }
+  ],
+  "welcome": [{
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/0/0d/Dlc_glados_ann_glados_prelim_03.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/0/03/Dlc_glados_ann_glados_prelim_05.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/5/50/Dlc_glados_ann_glados_prelim_08.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/7/71/Dlc_glados_ann_glados_prelim_13.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/2/21/Dlc_glados_ann_glados_gamemode_14.mp3"
+    }
+  ]
+}
