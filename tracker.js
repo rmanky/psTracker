@@ -13,8 +13,6 @@ const webSocketUrl = 'wss://push.planetside2.com/streaming?environment=ps2&servi
 
 const experienceLookupURL = 'https://census.daybreakgames.com/s:rmankaryousID/get/ps2/experience?c:limit=1430';
 
-const soundJson = require('./soundbank.json');
-
 function submitName(characterName) {
   fetch(nameLookupURL + characterName)
     .then(data => {
@@ -54,10 +52,11 @@ function eventHandler(event) {
   const parsedData = JSON.parse(event.data);
   try {
     const timestamp = parsedData.payload.timestamp;
-    if (timestamp == lastTimeStamp) {} else {
+    if (timestamp != lastTimeStamp) {
       lastTimeStamp = timestamp;
       const attacker = parsedData.payload.attacker_character_id;
       const killed = parsedData.payload.character_id;
+
       voiceLine(attacker, killed)
     }
   } catch (error) {
@@ -72,16 +71,18 @@ function eventHandler(event) {
 }
 
 function voiceLine(attackerID, killedID) {
-  if (attackerID == characterID) {
+  if (killedID == characterID) {
+    playSound("death");
+  } else if (attackerID == characterID){
     playSound("singlekill");
-  } else {
-    console.log("Better luck next time");
   }
 }
 
 function playSound(type) {
-  console.log(type + " sound playing");
-  const randomSound = soundJson[type][Math.floor(Math.random() * soundJson[type].length)].path;
+  const random = Math.floor(Math.random() * soundJson[type].length);
+  console.log(type + " sound playing #" + random);
+  const randomSound = soundJson[type][random].path;
   const sound = new Audio(randomSound);
   const play = sound.play();
+  console.log(play);
 }

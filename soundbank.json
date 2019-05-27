@@ -1,4 +1,4 @@
-{
+soundJson = {
   "singlekill": [{
       "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/1/13/Dlc_glados_killing_spree_ann_glados_kill_mega_02.mp3"
     },
@@ -38,6 +38,31 @@
     },
     {
       "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/2/21/Dlc_glados_ann_glados_gamemode_14.mp3"
+    }
+  ],
+  "death": [{
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/9/92/Dlc_glados_ann_glados_ally_neg_04.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/2/29/Dlc_glados_ann_glados_ally_neg_06.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/c/c8/Dlc_glados_ann_glados_ally_neg_10.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/c/c6/Dlc_glados_ann_glados_ally_neg_12.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/f/f1/Dlc_glados_ann_glados_ally_neg_13.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/f/f2/Dlc_glados_ann_glados_ally_neg_16.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/f/f3/Dlc_glados_ann_glados_event_neg_12.mp3"
+    },
+    {
+      "path": "https://gamepedia.cursecdn.com/dota2_gamepedia/c/c8/Dlc_glados_ann_glados_event_neg_11.mp3"
     }
   ]
 }
