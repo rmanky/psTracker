@@ -7,6 +7,8 @@ var characterID = 0;
 
 var soundsLoaded = false;
 
+var volumeRange = document.getElementById("volumeRange");
+
 const nameLookupURL = 'https://census.daybreakgames.com/s:rmankaryousID/get/ps2/character?name.first_lower=';
 
 const webSocketUrl = 'wss://push.planetside2.com/streaming?environment=ps2&service-id=s:rmankaryousID';
@@ -73,7 +75,7 @@ function eventHandler(event) {
 function voiceLine(attackerID, killedID) {
   if (killedID == characterID) {
     playSound("death");
-  } else if (attackerID == characterID){
+  } else if (attackerID == characterID) {
     playSound("singlekill");
   }
 }
@@ -82,7 +84,7 @@ function playSound(type) {
   const random = Math.floor(Math.random() * soundJson[type].length);
   console.log(type + " sound playing #" + random);
   const randomSound = soundJson[type][random].path;
-  const sound = new Audio(randomSound);
+  var sound = new Audio(randomSound);
   const play = sound.play();
-  console.log(play);
+  sound.volume = volumeRange.value / 100.0;
 }
