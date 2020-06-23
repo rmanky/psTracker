@@ -1,6 +1,3 @@
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
-
 var lastTimeStamp = 0;
 
 var characterID = 0;
@@ -9,11 +6,9 @@ var soundsLoaded = false;
 
 var volumeRange = document.getElementById("volumeRange");
 
-const nameLookupURL = 'https://census.daybreakgames.com/s:rmankaryousID/get/ps2/character?name.first_lower=';
+const nameLookupURL = 'https://census.daybreakgames.com/s:rmankaryousID/get/ps2/character?name.first=';
 
 const webSocketUrl = 'wss://push.planetside2.com/streaming?environment=ps2&service-id=s:rmankaryousID';
-
-const experienceLookupURL = 'https://census.daybreakgames.com/s:rmankaryousID/get/ps2/experience?c:limit=1430';
 
 function submitName(characterName) {
   fetch(nameLookupURL + characterName)
